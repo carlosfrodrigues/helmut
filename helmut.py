@@ -32,11 +32,8 @@ class NeuralNetwork:
         for i in sortedIndex:
             if floatingModel:
                 self.returnedValue[self.labels[i]] = float(results[i])
-                #self.returnedValue = dict(zip(self.labels, [float(x) for x in results]))
-                #print('{:08.6f}: {}'.format(float(results[i]), labels[i]))
             else:
                 self.returnedValue[self.labels[i]] = float(results[i])/255.0
-                #self.returnedValue = dict(zip(self.labels, [float(x)/255.0 for x in results]))
                 
     def show(self):
         for keys, values in self.returnedValue.items():
